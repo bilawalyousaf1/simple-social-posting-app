@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #66d21e;
+  color: black;
+  width: 100%;
+  height: 60px;
+  padding: 10px;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.user-gmail {
+  font-size: 24px;
+}
+.logout {
+  background-color: #459a10;
+  color: #623636;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  font-weight: 900;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.logout:hover {
+  background: linear-gradient(135deg, #ff1a1a, #b30000);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+.logout:active {
+  transform: scale(0.96);
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  padding: 0 15px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  outline: none;
+}
+form input:focus,
+form textarea:focus {
+  border-color: #66d21e;
+  box-shadow: 0 0 0 2px rgba(102, 210, 30, 0.2);
+}
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+button {
+  align-self: flex-end;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #66d21e;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: #57b91a;
+}
+.single-post {
+  width: 100%;
+  max-width: 1100px;
+  margin: 2px auto;
+  padding: 20px 25px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #66d21e;
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
+}
+.single-post h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+  word-wrap: break-word;
+}
+.single-post h4 {
+  font-size: 15px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.6;
+  word-wrap: break-word;
+  margin-bottom: 25px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+.single-post h2:last-child {
+  position: absolute;
+  bottom: 15px;
+  right: 20px;
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  width: 100%;
+  padding: 20px;
+}
+.post-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.post-btns button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+/* Like Button */
+.post-btns button:nth-child(1) {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+}
+
+.post-btns button:nth-child(1):hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(34, 197, 94, 0.4);
+}
+
+/* Edit Button */
+.post-btns button:nth-child(2) {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  color: white;
+}
+
+.post-btns button:nth-child(2):hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Delete Button */
+.post-btns button:nth-child(3) {
+  background: linear-gradient(135deg, #ef4444, #dc2626);
+  color: white;
+}
+
+.post-btns button:nth-child(3):hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(239, 68, 68, 0.4);
+}
+
+.post-btns button:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 992px) {
+  .posts-container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .user-gmail {
+    font-size: 18px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 80%;
+  }
+  .logout {
+    padding: 8px 14px;
+    font-size: 13px;
+  }
+  form {
+    padding: 15px;
+  }
+}
+
+.post-btns button.liked-posts {
+  background: rgb(43, 122, 148) !important;
+  color: black !important;
+}
+
+.single-post {
+  position: relative;
+}
+
+.post-time {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  color: var(--text-dim);
+  font-weight: 500;
+}

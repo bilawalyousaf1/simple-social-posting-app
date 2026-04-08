@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Posting App</title>
+  </head>
+  <body>
+    <h1>LOADING...</h1>
+<script>
+      let user_string = localStorage.getItem("currentUsers");
+      let string_data = JSON.parse(user_string);
+
+      if (string_data) {
+        window.location.href = "../posts/index.html";
+      } else {
+        window.location.href = "../Login/index.html";
+      }
+
+    </script>
+  </body>
+</html>

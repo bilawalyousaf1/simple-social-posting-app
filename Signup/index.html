@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <video class="bg-video" autoplay muted loop>
+      <source src="../Signup/videos/video3.mp4" type="video/mp4" />
+    </video>
+
+    <div class="wrapper">
+      <form class="sign-form">
+        <h1 class="heading">Sign Up</h1>
+
+        <div class="input-box">
+          <input type="email" id="email" placeholder="" required autofocus />
+          <label>Email Address</label>
+          <i class="fa-regular fa-envelope"></i>
+          <span class="line"></span>
+        </div>
+
+        <div class="input-box">
+          <input type="password" id="password" placeholder="" required />
+          <label>Password</label>
+          <i class="show-pass1 fa-solid fa-eye"></i>
+          <i class="hide-pass1 fa-solid fa-eye-slash" style="display: none"></i>
+          <span class="line"></span>
+        </div>
+
+        <div class="input-box">
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder=""
+            required
+          />
+          <label>Confirm Password</label>
+          <span class="line"></span>
+          <i class="show-pass2 fa-solid fa-eye"></i>
+          <i class="hide-pass2 fa-solid fa-eye-slash" style="display: none"></i>
+        </div>
+        <p class="account-text">
+          Already have an account?
+          <a href="../Login/index.html">Log in</a>
+        </p>
+        <button type="submit" class="signup-btn">Sign Up</button>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.mjs"></script>
+
+    <a href="../Login/index.html"></a>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <video class="bg-video" autoplay muted loop>
+      <source src="../Signup/videos/dumm3.webm" type="video/mp4" />
+    </video>
+
+    <header>
+      <p class="user-gmail"></p>
+      <button onclick="logout()" class="logout">Log out</button>
+    </header>
+
+    <div class="wrapper">
+      <form>
+        <input type="text" placeholder="Title" id="title" required/>
+        <textarea placeholder="Enter Post Description" id="desc" required></textarea>
+        <button>Post</button>
+      </form>
+    </div>
+
+    <div id="output" class="posts-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.mjs"></script>
+  </body>
+</html>
